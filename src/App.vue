@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <color-picker :swatches="['e3342f', '3490dc', 'f6993f', '38c172', 'fff', 'dae4e9']" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import ColorPicker from './components/ColorPicker'
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
-    HelloWorld
+    ColorPicker
   }
-};
+}
 </script>
 
 <style>
+html,
+body,
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  margin: 0;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
 }
 </style>
